@@ -1,4 +1,4 @@
-# 🛠️ Terraform AWS HA Infrastructure (ALB + ASG + Dockerized App)
+# 🛠️ Production-Ready Highly Available AWS Infrastructure using Terraform (ALB, Auto Scaling, Dockerized Application)
 
 ## 📌 Project Overview
 
