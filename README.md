@@ -104,6 +104,67 @@ After deployment, Terraform provides:
 
 ## 🚀 How to Use
 
+## 📋 Prerequisites
+
+Before using this project on your system, ensure the following are set up:
+
+* **AWS Account**
+  An active AWS account with permissions to create resources (EC2, VPC, ALB, ASG, etc.)
+
+* **AWS CLI Configured**
+  Install and configure AWS CLI with your credentials:
+
+  ```bash
+  aws configure
+  ```
+
+  Provide:
+
+  * Access Key
+  * Secret Key
+  * Default Region (e.g., `us-east-1`)
+  * Output format (`json`)
+
+* **Terraform Installed**
+  Install Terraform (v1.x recommended) and verify:
+
+  ```bash
+  terraform -version
+  ```
+
+* **Key Pair (Optional but Recommended)**
+  Create an EC2 key pair in AWS if you want SSH access to instances.
+
+* **Basic AWS Permissions**
+  Ensure your IAM user/role has permissions for:
+
+  * EC2
+  * VPC
+  * Auto Scaling
+  * Elastic Load Balancer
+
+---
+---
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/Chaitanyaa1211/terraform-aws-ha-app.git
+cd terraform-aws-ha-app/env/dev
+
+terraform init
+terraform plan
+terraform apply
+```
+
+---
+
+## ⚠️ Important
+
+* Access the app using **ALB DNS**, not EC2 IP
+* Run `terraform destroy` after use to avoid AWS charges
+
+
 ### 1️⃣ Clone the Repository
 
 ```bash
@@ -193,6 +254,18 @@ terraform destroy
 👉 Prevent unnecessary AWS charges
 
 ---
+
+
+## ⚙️ Configuration Notes
+
+* Update **AWS region** if needed in provider configuration
+* Ensure your account supports required instance types (e.g., `t2.micro`)
+* Docker image used:
+
+  ```id="ck0g6v"
+  chaitanyaaaa/smartcalc:v1.10
+  ```
+  ---
 
 ## 💡 Learnings
 
