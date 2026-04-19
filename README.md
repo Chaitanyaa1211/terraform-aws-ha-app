@@ -85,6 +85,22 @@ After deployment, Terraform provides:
 👉 Open the ALB DNS in browser to access the application.
 
 ---
+## ⚠️ Challenges & Solutions 
+
+* **Terraform Module Errors**
+  Fixed “unsupported argument” issues by properly defining inputs (`variables.tf`) and outputs between modules.
+
+* **ALB Subnet Issue (Same AZ)**
+  Resolved by dynamically assigning subnets across multiple Availability Zones using `aws_availability_zones`.
+
+* **EC2 Instances Missing Name Tags**
+  Solved using ASG `tag` block with `propagate_at_launch = true`.
+
+* **Git Push Rejected (History Conflict)**
+  Resolved using clean force push (`git push -f origin main`).
+
+---
+
 
 ## 🚀 How to Use
 
